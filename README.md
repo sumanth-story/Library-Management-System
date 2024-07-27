@@ -6,6 +6,7 @@ This Library Management System is designed to help librarians manage books, patr
 
 
 ## Features
+
 - **Book Mangement**
   - Add , remove , and update books
   - Search for books by title, author, or ISBN
@@ -16,3 +17,27 @@ This Library Management System is designed to help librarians manage books, patr
   - Book Checkout and return
 - **Inventory Management**
   - Track available and borrowed books
+ 
+## Optional Extensions [ PENDING ] 
+  
+- Multi-branch support
+- Reservation system
+- Recommendation system
+
+## Project Structure 
+```
+LibraryManagementSystem/
+├── src/
+│ ├── library/
+│ │ ├── main/
+│ | │ ├── Book.java
+│ │ | ├── Patron.java
+│ │ ├── manager/
+│ │ │ ├── BookManager.java
+│ │ │ ├── PatronManager.java
+│ │ │ ├── LendingManager.java
+│ │ │ ├── InventoryManager.java
+│ │ ├── model/
+│ │ │ ├── LibrarySystem.java
+├── README.md
+```
