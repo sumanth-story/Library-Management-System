@@ -16,16 +16,38 @@ public class Book {
     }
 
     //Getters
-    public String getTitle() { return title; }
-    public String getAuthor() { return author; }
-    public String getISBN() { return ISBN; }
-    public int getPublicationYear() { return publicationYear; }
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
 
     //Setters
-    public void setTitle(String title) { this.title = title; }
-    public void setAuthor(String author) { this.author = author; }
-    public void setISBN(String ISBN) { this.ISBN = ISBN; }
-    public void setPublicationYear(int publicationYear) { this.publicationYear = publicationYear; }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
+    }
 
 
     public Patron getLoaned() {
@@ -39,7 +61,7 @@ public class Book {
     @Override
     public String toString() {
         return "-> " + "Title: '" + title + '\'' + ", Author: '" + author + '\'' +
-                ", ISBN: '" + ISBN + '\'' + ", Publication Year: " + publicationYear ;
+                ", ISBN: '" + ISBN + '\'' + ", Publication Year: " + publicationYear;
     }
 
 }

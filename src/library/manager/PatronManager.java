@@ -10,8 +10,7 @@ public class PatronManager {
 
     private List<Patron> patrons;
 
-    public PatronManager()
-    {
+    public PatronManager() {
         this.patrons = new ArrayList<>();
     }
 
@@ -20,8 +19,7 @@ public class PatronManager {
      *
      * @param patron, the patron to be added
      */
-    public void addPatron(Patron patron)
-    {
+    public void addPatron(Patron patron) {
         patrons.add(patron);
     }
 
@@ -31,12 +29,10 @@ public class PatronManager {
      * @param old_patron , the existing patron to be updated
      * @param new_patron , the new patron details to replace to old patron.
      */
-    public void addPatron(Patron old_patron , Patron new_patron)
-    {
+    public void addPatron(Patron old_patron, Patron new_patron) {
         int pos = patrons.indexOf(old_patron);
-        if(pos != -1)
-        {
-            patrons.set(pos,new_patron);
+        if (pos != -1) {
+            patrons.set(pos, new_patron);
         }
     }
 
@@ -45,9 +41,9 @@ public class PatronManager {
      * Tracks the borrowing history of a patron by adding to their borrowed books list
      *
      * @param patron , the patron who borrowed the book
-     * @param book , the book that was borrowed
+     * @param book   , the book that was borrowed
      */
-    public void trackBorrowingHistory(Patron patron, Book book){
+    public void trackBorrowingHistory(Patron patron, Book book) {
         patron.addBorrowedBook(book);
     }
 
@@ -56,8 +52,7 @@ public class PatronManager {
      *
      * @return the list of patrons
      */
-    public List<Patron> getAllPatrons()
-    {
+    public List<Patron> getAllPatrons() {
         return patrons;
     }
 
@@ -68,14 +63,11 @@ public class PatronManager {
      * @param id , the ID to search for
      * @return , the patron with the matching ID, or null if no match is found
      */
-    public Patron searchPatronById(String id)
-    {
-        for(Patron patron : patrons)
-        {
-            if(patron.getId().equals(id))
-                {
-                    return patron;
-                }
+    public Patron searchPatronById(String id) {
+        for (Patron patron : patrons) {
+            if (patron.getId().equals(id)) {
+                return patron;
+            }
         }
         return null;
     }

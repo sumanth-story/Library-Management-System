@@ -9,8 +9,7 @@ public class BookManager {
 
     private List<Book> books;
 
-    public BookManager()
-    {
+    public BookManager() {
         this.books = new ArrayList<>();
     }
 
@@ -19,8 +18,7 @@ public class BookManager {
      *
      * @param book
      */
-    public void addBook(Book book)
-    {
+    public void addBook(Book book) {
         books.add(book);
     }
 
@@ -30,22 +28,18 @@ public class BookManager {
      *
      * @param book
      */
-    public void removeBook(Book book)
-    {
+    public void removeBook(Book book) {
         books.remove(book);
     }
 
     /**
-     *
      * @param old_book , the existing book to be updated
      * @param new_book , the new book details to replace the old book
      */
-    public void updateBook(Book old_book, Book new_book)
-    {
+    public void updateBook(Book old_book, Book new_book) {
         int pos = books.indexOf(old_book);
-        if(pos != -1)
-        {
-            books.set(pos,new_book);
+        if (pos != -1) {
+            books.set(pos, new_book);
         }
     }
 
@@ -56,12 +50,10 @@ public class BookManager {
      * @param title , the title to search for
      * @return , a list of books with the matching title
      */
-    public List<Book> searchBooksByTitle(String title)
-    {
+    public List<Book> searchBooksByTitle(String title) {
         List<Book> result = new ArrayList<>();
-        for(Book book : books)
-        {
-            if(book.getTitle().equalsIgnoreCase(title)){
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
                 result.add(book);
             }
         }
@@ -75,17 +67,14 @@ public class BookManager {
      * @param author , the author to search for
      * @return , a list of books with the matching author
      */
-    public List<Book> searchBooksByAuthor(String author)
-    {
+    public List<Book> searchBooksByAuthor(String author) {
         List<Book> result = new ArrayList<>();
-        for(Book book : books)
-        {
-            if(book.getAuthor().equalsIgnoreCase(author))
-            {
+        for (Book book : books) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
                 result.add(book);
             }
         }
-        return result ;
+        return result;
     }
 
     /**
@@ -94,13 +83,10 @@ public class BookManager {
      * @param ISBN, the ISBN to search for
      * @return , the book with the matching ISBN, or null if no match is found
      */
-    public Book searchBooksByISBN(String ISBN)
-    {
-        for(Book book : books)
-        {
-            if(book.getISBN().equalsIgnoreCase(ISBN))
-            {
-                return book ;
+    public Book searchBooksByISBN(String ISBN) {
+        for (Book book : books) {
+            if (book.getISBN().equalsIgnoreCase(ISBN)) {
+                return book;
             }
         }
         return null;

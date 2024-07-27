@@ -7,7 +7,7 @@ public class Patron {
     private String id;
     private String name;
     private String email;
-    private  List<Book> borrowedBooks;
+    private List<Book> borrowedBooks;
 
     public Patron(String id, String name, String email) {
         this.id = id;
@@ -17,23 +17,41 @@ public class Patron {
     }
 
     //Getters
-    public String getId()  { return id; }
-    public String getName() { return name; }
-    public String getEmail() { return email; }
-    public List<Book> getBorrowedBooks() { return borrowedBooks; }
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public List<Book> getBorrowedBooks() {
+        return borrowedBooks;
+    }
 
     //Setters
-    public void setId(String id) { this.id = id; }
-    public void setName(String name) { this.name = name; }
-    public void setEmail(String email) { this.email = email; }
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     /**
      * Adds a book to the list of borrowed books
      *
      * @param book , the book to be added
      */
-    public void addBorrowedBook(Book book)
-    {
+    public void addBorrowedBook(Book book) {
         borrowedBooks.add(book);
     }
 
@@ -43,8 +61,7 @@ public class Patron {
      *
      * @param book
      */
-    public void removeBorrowedBook(Book book)
-    {
+    public void removeBorrowedBook(Book book) {
         borrowedBooks.remove(book);
     }
 
@@ -54,7 +71,7 @@ public class Patron {
                 "id: '" + id + '\'' +
                 ", name: '" + name + '\'' +
                 ", email: '" + email + '\'' +
-                ", borrowedBooks: " + borrowedBooks ;
+                ", borrowedBooks: " + borrowedBooks;
     }
 
 
